@@ -1,0 +1,17 @@
+<div *ngIf="state">
+    <h3>Liste des products</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Available</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <app-products-item *ngFor="let product of state.products" [product]="product" style="display: contents"></app-products-item>
+        </tbody>
+    </table>
+</div>
